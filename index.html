@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Development Project ideas roadmap</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Space+Grotesk:wght@500;600&amp;display=swap');
+
+        :root {
+            --bg: #0f0f12;
+            --card-bg: #1a1a20;
+            --accent: #22d3ee;
+            --text: #e2e8f0;
+            --text-light: #94a3b8;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', system_ui, sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        h1 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 2.8rem;
+            font-weight: 600;
+            background: linear-gradient(90deg, #22d3ee, #67e8f9);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 12px;
+        }
+
+        .subtitle {
+            color: var(--text-light);
+            font-size: 1.25rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .section {
+            margin-bottom: 80px;
+        }
+
+        .section-header {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 32px;
+            padding-bottom: 16px;
+            border-bottom: 2px solid #334155;
+        }
+
+        .difficulty-badge {
+            padding: 6px 20px;
+            border-radius: 9999px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .beginner .difficulty-badge {
+            background: #22c55e;
+            color: #052e16;
+        }
+
+        .intermediate .difficulty-badge {
+            background: #eab308;
+            color: #422006;
+        }
+
+        .advanced .difficulty-badge {
+            background: #ef4444;
+            color: #450a0a;
+        }
+
+        .section-title {
+            font-size: 1.75rem;
+            font-weight: 600;
+            color: white;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+            gap: 24px;
+        }
+
+        .project-card {
+            background: var(--card-bg);
+            border-radius: 16px;
+            padding: 28px;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 1px solid #334155;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .project-card:hover {
+            transform: translateY(-8px);
+            border-color: var(--accent);
+            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+        }
+
+        .project-number {
+            font-size: 0.875rem;
+            color: var(--accent);
+            font-weight: 600;
+            margin-bottom: 12px;
+            letter-spacing: 1px;
+        }
+
+        .project-title {
+            font-size: 1.35rem;
+            font-weight: 600;
+            margin-bottom: 16px;
+            color: white;
+            line-height: 1.3;
+        }
+
+        .project-desc {
+            color: var(--text-light);
+            margin-bottom: 24px;
+            flex-grow: 1;
+            font-size: 1.02rem;
+        }
+
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: auto;
+        }
+
+        .skill-tag {
+            background: #1e2937;
+            color: #cbd5e1;
+            padding: 4px 14px;
+            border-radius: 9999px;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 100px;
+            color: #64748b;
+            font-size: 0.95rem;
+        }
+
+        .github-link {
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        @media (max-width: 768px) {
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+
+            h1 {
+                font-size: 2.4rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Game Development Projects</h1>
+            <p class="subtitle">A curated list of project ideas to build your game dev portfolio<br>From simple
+                mechanics to advanced systems</p>
+        </header>
+
+        <!-- Beginner Section -->
+        <div class="section beginner">
+            <div class="section-header">
+                <div class="difficulty-badge">Beginner</div>
+                <h2 class="section-title">Beginner Projects</h2>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-number">01</div>
+                    <div class="project-title">Pong Clone</div>
+                    <div class="project-desc">Classic paddle-ball game with scoring, sound effects, and increasing
+                        difficulty.</div>
+                    <div class="skills">
+                        <span class="skill-tag">Collision Detection</span>
+                        <span class="skill-tag">Input Handling</span>
+                        <span class="skill-tag">Basic Physics</span>
+                        <span class="skill-tag">Audio</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-number">02</div>
+                    <div class="project-title">Snake Game</div>
+                    <div class="project-desc">Grid-based movement, food collection, growing body, and game-over
+                        conditions.</div>
+                    <div class="skills">
+                        <span class="skill-tag">Grid Systems</span>
+                        <span class="skill-tag">Movement Logic</span>
+                        <span class="skill-tag">State Management</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-number">03</div>
+                    <div class="project-title">Flappy Bird Clone</div>
+                    <div class="project-desc">Endless side-scroller with gravity, pipe obstacles, and score tracking.
+                    </div>
+                    <div class="skills">
+                        <span class="skill-tag">Physics Simulation</span>
+                        <span class="skill-tag">Procedural Generation</span>
+                        <span class="skill-tag">Timing Input</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-number">04</div>
+                    <div class="project-title">Tic-Tac-Toe with AI</div>
+                    <div class="project-desc">Playable board with unbeatable minimax AI opponent (or PvP mode).</div>
+                    <div class="skills">
+                        <span class="skill-tag">Minimax AI</span>
+                        <span class="skill-tag">UI State</span>
+                        <span class="skill-tag">Win Detection</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-number">05</div>
+                    <div class="project-title">Breakout / Arkanoid</div>
+                    <div class="project-desc">Paddle, bouncing ball, destructible bricks, and power-ups.</div>
+                    <div class="skills">
+                        <span class="skill-tag">Ball Physics</span>
+                        <span class="skill-tag">Power-up Systems</span>
+                        <span class="skill-tag">Progressive Difficulty</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-number">06</div>
+                    <div class="project-title">Basic 2D Platformer</div>
+                    <div class="project-desc">Character with run/jump, platforms, collectibles, and a goal.</div>
+                    <div class="skills">
+                        <span class="skill-tag">Platformer Physics</span>
+                        <span class="skill-tag">Animation</span>
+                        <span class="skill-tag">Level Design</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-number">07</div>
+                    <div class="project-title">Memory Match Card Game</div>
+                    <div class="project-desc">Grid of cards that flip, match pairs, with timer and scoring.</div>
+                    <div class="skills">
+                        <span class="skill-tag">UI interactions</span>
+                        <span class="skill-tag">Animations</span>
+                        <span class="skill-tag">Data Structures</span>
+                        <span class="skill-tag">Timers</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-number">08</div>
+                    <div class="project-title">Simple Endless Runner</div>
+                    <div class="project-desc">Auto-running character that jumps over obstacles with procedural spawning.
+                    </div>
+                    <div class="skills">
+                        <span class="skill-tag">Procedural generation basics</span>
+                        <span class="skill-tag">Parallax scrolling</span>
+                        <span class="skill-tag">High-score persistence</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Intermediate Section -->
+        <div class="section intermediate">
+            <div class="section-header">
+                <div class="difficulty-badge">Intermediate</div>
+                <h2 class="section-title">Intermediate Projects</h2>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-number">01</div>
+                    <div class="project-title">2D Top-Down Shooter</div>
+                    <div class="project-desc">Player movement, shooting projectiles, enemies that chase/fire back, and
+                        health system.</div>
+                    <div class="skills">
+                        <span class="skill-tag">Projectile Physics</span>
+                        <span class="skill-tag">Enemy AI</span>
+                        <span class="skill-tag">Health &amp; Damage</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-number">02</div>
+                    <div class="project-title">Inventory System Demo</div>
+                    <div class="project-desc">Drag-and-drop slots, item stacking, equipping, stats display, and saving.
+                    </div>
+                    <div class="skills">
+                        <span class="skill-tag">Drag &amp; Drop UI</span>
+                        <span class="skill-tag">Data Persistence</span>
+                        <span class="skill-tag">Item Database</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-number">03</div>
+                    <div class="project-title">Branching Dialogue System</div>
+                    <div class="project-desc">NPC conversations with choices, conditions, and multiple endings.</div>
+                    <div class="skills">
+                        <span class="skill-tag">State Machines</span>
+                        <span class="skill-tag">Data-driven Dialogue</span>
+                        <span class="skill-tag">UI Text Boxes</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-number">04</div>
+                    <div class="project-title">Procedural Dungeon Generator</div>
+                    <div class="project-desc">Random rooms/corridors with player navigation, enemies, and simple combat.
+                    </div>
+                    <div class="skills">
+                        <span class="skill-tag">Procedural Generation</span>
+                        <span class="skill-tag">Pathfinding Basics</span>
+                        <span class="skill-tag">Level Loading</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-number">05</div>
+                    <div class="project-title">Physics-Based Puzzle Game</div>
+                    <div class="project-desc">Rigid-body objects, gravity, levers, and goals (e.g., get ball into
+                        basket).</div>
+                    <div class="skills">
+                        <span class="skill-tag">Timers</span>
+                        <span class="skill-tag">Save/load progress,</span>
+                        <span class="skill-tag">Visual feedback</span>
+                        <span class="skill-tag">Stats tracking</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-number">06</div>
+                    <div class="project-title">Pomodoro-Style Game Timer with Stats</div>
+                    <div class="project-desc">Productivity timer turned into a mini-game (e.g., plant grows while you
+                        focus).</div>
+                    <div class="skills">
+                        <span class="skill-tag">Advanced Physics</span>
+                        <span class="skill-tag">Puzzle Logic</span>
+                        <span class="skill-tag">Level Progression</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-number">07</div>
+                    <div class="project-title">Chess/Checkers Clone with AI</div>
+                    <div class="project-desc">Full rules implementation + basic AI opponent (or hotseat multiplayer).
+                    </div>
+                    <div class="skills">
+                        <span class="skill-tag">Board state management</span>
+                        <span class="skill-tag">Rule validation</span>
+                        <span class="skill-tag">Minimax AI optimization</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-number">08</div>
+                    <div class="project-title">Particle System & Effects Demo</div>
+                    <div class="project-desc">Standalone tool showing explosions, fire, smoke, with customizable
+                        parameters.</div>
+                    <div class="skills">
+                        <span class="skill-tag">Particle emitters</span>
+                        <span class="skill-tag">Shaders/effects</span>
+                        <span class="skill-tag">Performance optimization</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Advanced Section -->
+        <div class="section advanced">
+            <div class="section-header">
+                <div class="difficulty-badge">Advanced</div>
+                <h2 class="section-title">Advanced Projects</h2>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-number">01</div>
+                    <div class="project-title">A* Pathfinding Visualizer Tool</div>
+                    <div class="project-desc">Interactive grid where you draw obstacles, set start/goal, and watch
+                        multiple algorithms (A*, Dijkstra, BFS) in real-time with step-by-step animation.</div>
+                    <div class="skills">
+                        <span class="skill-tag">Pathfinding Algorithms</span>
+                        <span class="skill-tag">Visualization UI</span>
+                        <span class="skill-tag">Performance Comparison</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-number">02</div>
+                    <div class="project-title">Behavior Tree AI Demo</div>
+                    <div class="project-desc">Modular enemy AI (patrol → chase → attack → flee) with visual debugger.
+                    </div>
+                    <div class="skills">
+                        <span class="skill-tag">Behavior Trees</span>
+                        <span class="skill-tag">State machines</span>
+                        <span class="skill-tag">AI Debugging</span>
+                        <span class="skill-tag">Modular Code</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-number">03</div>
+                    <div class="project-title">Multiplayer Prototype</div>
+                    <div class="project-desc">Real-time co-op or PvP with networking sync (e.g., arena fighter).</div>
+                    <div class="skills">
+                        <span class="skill-tag">Networking</span>
+                        <span class="skill-tag">Synchronization</span>
+                        <span class="skill-tag">Latency Handling</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-number">04</div>
+                    <div class="project-title">Roguelike Prototype</div>
+                    <div class="project-desc">Procedural levels, turn-based combat, inventory, permadeath, and multiple
+                        enemy types.</div>
+                    <div class="skills">
+                        <span class="skill-tag">Procedural Content</span>
+                        <span class="skill-tag">Combat Systems</span>
+                        <span class="skill-tag">Data-driven Design</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-number">05</div>
+                    <div class="project-title">In-Game Level Editor Tool</div>
+                    <div class="project-desc">Standalone or in-game editor for placing tiles/entities, saving/exporting
+                        levels as JSON.</div>
+                    <div class="skills">
+                        <span class="skill-tag">Tool Development</span>
+                        <span class="skill-tag">Serialization</span>
+                        <span class="skill-tag">Custom UI</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-number">06</div>
+                    <div class="project-title">Save/Load System with Multiple Profiles</div>
+                    <div class="project-desc">Full persistence demo including player progress, settings, multiple save
+                        slots, and cloud mock (or local).</div>
+                    <div class="skills">
+                        <span class="skill-tag">Data serialization</span>
+                        <span class="skill-tag">Versioning saves</span>
+                        <span class="skill-tag">Encryption basics</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-number">07</div>
+                    <div class="project-title">Shader & Post-Processing Effects Showcase</div>
+                    <div class="project-desc">Scene with togglable effects (pixelation, bloom, outline, day-night cycle)
+                        and parameter sliders.</div>
+                    <div class="skills">
+                        <span class="skill-tag">Shader programming</span>
+                        <span class="skill-tag">Post-processing</span>
+                        <span class="skill-tag">Visual polish</span>
+                        <span class="skill-tag">Performance tuning</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p>Inspired by roadmap.sh</p>
+            <p style="margin-top: 12px;">Feel free to fork, customize, or expand this page!</p>
+        </footer>
+    </div>
+</body>
+
+</html>

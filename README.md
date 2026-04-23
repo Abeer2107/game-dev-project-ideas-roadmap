@@ -1,2 +1,6 @@
-# game-dev-project-ideas-roadmap
-Inspired by roadmap.sh: A Curated list of game development project ideas (beginner to advanced) to build a strong portfolio. Includes Pong, Roguelike, Pathfinding Visualizer, and more.
+# 🎮 Game Development Project Ideas Roadmap
+
+[![View Site](https://img.shields.io/badge/View_Page-8b5cf6?style=for-the-badge&logo=github&logoColor=white)](https://abeer2107.github.io/game-dev-project-ideas-roadmap/)
+
+Inspired by [roadmap.sh](https://roadmap.sh)<br>
+Contributions and improvements are welcome!
